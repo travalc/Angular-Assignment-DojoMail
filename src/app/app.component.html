@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Dojo Mail
+  </h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 heading">
+      <h2>Email</h2>
+    </div>
+    <div class="col-md-3 heading">
+      <h2>Importance</h2>
+    </div>
+    <div class="col-md-3 heading">
+      <h2>Subject</h2>
+    </div>
+    <div class="col-md-3 heading">
+      <h2>Content</h2>
+    </div>
+  </div>
+  <div *ngFor="let email of emails" class="row">
+    <div class="col-md-3">
+      <p>{{ email.email }}</p>
+    </div>
+    <div class="col-md-3">
+      <p *ngIf="email.importance">High</p>
+      <p *ngIf="!email.importance">Low</p>
+    </div>
+    <div class="col-md-3">
+      <p>{{ email.subject }}</p>
+    </div>
+    <div class="col-md-3">
+      <p>{{ email.content }}</p>
+    </div>
+  </div>
+</div>
+
+
